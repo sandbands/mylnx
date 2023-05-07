@@ -146,6 +146,8 @@ alias win64-g++="x86_64-w64-mingw32-g++"
 alias win64-cargo="cargo build --target x86_64-pc-windows-gnu"
 alias py="python"
 
+export EDITOR=nvim
+
 export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 export PATH="$HOME/vcpkg:$PATH"
 export PATH="$HOME.local/bin:$PATH"
