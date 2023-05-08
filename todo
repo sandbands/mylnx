@@ -45,4 +45,4 @@ git clone https://github.com/itsrxmmy/otherstuff
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 
-yay -S pamac-aur 
+yay -S pamac-aur brave-bin google-chrome
