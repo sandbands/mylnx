@@ -1,7 +1,8 @@
 sudo pacman -Syyuu
-sudo pacman -S vim neovim neovide go python cmake binutils nano flatpak discord mingw-w64-gcc git base-devel zsh flameshot github-cli fish python-pip npm nodejs readline yakuake copyq python-pipx virtualbox 
-sudo pacman -S --needed base-devel
-sudo pacman -S base-devel
+sudo pacman -Syyuu vim neovim neovide go python cmake binutils nano flatpak discord mingw-w64-gcc git base-devel zsh flameshot github-cli fish python-pip npm nodejs readline yakuake copyq python-pipx virtualbox 
+sudo pacman -Syyuu --needed base-devel
+sudo pacman -Syyuu base-devel
+sudo pacman -Syyuu ninja
 sudo brew install hashicorp/tap/vagrant
 
 
@@ -26,7 +27,7 @@ yay -S icu69-bin mingw-w64-tools snapd appimagelauncher visual-studio-code-bin g
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 
-sudo pacman -S curl zip unzip tar cmake ninja
+sudo pacman -Syyuu curl zip unzip tar cmake ninja
 
 
 git clone https://github.com/Microsoft/vcpkg.git
@@ -46,4 +47,11 @@ git clone https://github.com/itsrxmmy/otherstuff
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 
-yay -S pamac-aur brave-bin google-chrome
+yay -Syyuu pamac-aur brave-bin google-chrome
+
+sudo pacman -sS java | grep jdk
+sudo pacman -Syyuu jdk-openjdk
+
+sudo pacman -Syyuu vala
+
+
