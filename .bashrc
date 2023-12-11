@@ -145,6 +145,7 @@ alias win64-gcc="x86_64-w64-mingw32-gcc"
 alias win64-g++="x86_64-w64-mingw32-g++"
 alias win64-cargo="cargo build --target x86_64-pc-windows-gnu"
 alias py="python"
+alias javac="archlinux-java"
 
 export EDITOR=nvim
 
