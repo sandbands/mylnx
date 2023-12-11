@@ -1,57 +1,88 @@
+echo "GENERAL INSTALLATIONS"
 sudo pacman -Syyuu
-sudo pacman -Syyuu vim neovim neovide go python cmake binutils nano flatpak discord mingw-w64-gcc git base-devel zsh flameshot github-cli fish python-pip npm nodejs readline yakuake copyq python-pipx virtualbox 
+sudo pacman -Syyuu vim neovim neovide clang go python cmake binutils nano flatpak discord mingw-w64-gcc git base-devel zsh flameshot github-cli fish python-pip npm nodejs readline yakuake copyq 
 sudo pacman -Syyuu --needed base-devel
 sudo pacman -Syyuu base-devel
 sudo pacman -Syyuu ninja
-sudo brew install hashicorp/tap/vagrant
 
 
-mkdir captures nasm-builds bin temp
+echo "VBOX SETUP AT www.linuxtechi.com/install-virtualbox-on-arch-linux/"
+sudo pacman -Syyuu qemu
+sudo pacman -Syyuu virtualbox virtualbox-guest-iso
+sudo gpasswd -a $USER vboxusers
+sudo modprobe vboxdrv
+yay -Syyuu virtualbox-ext-oracle
+sudo systemctl enable vboxweb.service
+sudo systemctl start vboxweb.service
+brew tap hashicorp/tap
+brew install hashicorp/tap/vagrant
+lsmod | grep -i vbox
 
+
+echo "CREATE FOLDERS FOR SCREENSHOTS, YOUR OWN BINARIES, TEMPORARY/SPAM FOLDER, AND NASM ASSEMBLY COMPILER BUILDS"
+mkdir captures bin temp nasm-builds 
+
+echo "INSTALL YAY"
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
+echo "GO BACK TO HOME"
 cd
 
+echo "INSTALL BASIC GOLANG TOOLS"
 go install golang.org/x/tools/cmd/goimports@latest
 go install golang.org/x/tools/gopls@latest
 
 
+echo "INSTALL OHMYZSH"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 
+echo "MORE GENERAL INSTALLATIONS"
 yay -S icu69-bin mingw-w64-tools snapd appimagelauncher visual-studio-code-bin google-chrome timeshift gparted
 
 
+echo "INSTALL HOMEBREW"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 
+echo "MORE GENERAL INSTALLATIONS"
 sudo pacman -Syyuu curl zip unzip tar cmake ninja
 
 
+echo "INSTALL VCPKG"
 git clone https://github.com/Microsoft/vcpkg.git
 ./vcpkg/bootstrap-vcpkg.sh
 
 
-https://www.nasm.us/ get nasm
-
-
+echo "GITHUB SETUP & FILE RETRIEVEMENT"
 gh auth login
+git clone https://github.com/sandbands/projects
+git clone https://github.com/sandbands/work
+git clone https://github.com/sandbands/tempdir ~/temp
+git clone https://github.com/sandbands/otherstuff
 
-git clone https://github.com/itsrxmmy/projects
-git clone https://github.com/itsrxmmy/work
-git clone https://github.com/itsrxmmy/tempdir ~/temp
-git clone https://github.com/itsrxmmy/otherstuff
-
+echo "INSTALL RUST"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-
+echo "MORE GENERAL INSTALLATIONS"
 yay -Syyuu pamac-aur brave-bin google-chrome
 
+echo "INSTALL DOTNET"
+sudo pacman -Syyuu dotnet-sdk dotnet-runtime dotnet-host dotnet-targeting-pack
+
+echo "INSTALL ASP"
+sudo pacman aspnet-runtime aspnet-targeting-pack
+
+echo "INSTALL JAVA"
 sudo pacman -sS java | grep jdk
 sudo pacman -Syyuu jdk-openjdk
 
+echo "INSTALL VALA"
 sudo pacman -Syyuu vala
+
+echo "GET NASM -> https://www.nasm.us/"
+
 
 
