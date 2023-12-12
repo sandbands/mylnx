@@ -4,6 +4,7 @@ sudo pacman -Syyuu vim neovim neovide clang go python cmake binutils nano flatpa
 sudo pacman -Syyuu --needed base-devel
 sudo pacman -Syyuu base-devel
 sudo pacman -Syyuu ninja
+sudo pacman -Syyuu llvm cppcheck
 
 
 echo "VBOX SETUP AT www.linuxtechi.com/install-virtualbox-on-arch-linux/"
