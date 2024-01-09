@@ -1,6 +1,6 @@
 echo "GENERAL INSTALLATIONS"
 sudo pacman -Syyuu
-sudo pacman -Syyuu vim neovim neovide clang go python cmake binutils nano flatpak discord mingw-w64-gcc git base-devel zsh flameshot github-cli fish python-pip npm nodejs readline yakuake copyq 
+sudo pacman -Syyuu vim neovim neovide go python gcc glibc gcc-libs clang nasm cmake binutils nano flatpak discord mingw-w64-gcc git base-devel zsh flameshot github-cli fish python-pip npm nodejs readline yakuake copyq 
 sudo pacman -Syyuu --needed base-devel
 sudo pacman -Syyuu base-devel
 sudo pacman -Syyuu ninja
@@ -66,6 +66,9 @@ git clone https://github.com/sandbands/otherstuff
 
 echo "INSTALL RUST"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+echo "MANUALLY INSTALL GDB"
+https://www.sourceware.org/gdb/
 
 echo "MORE GENERAL INSTALLATIONS"
 yay -Syyuu pamac-aur brave-bin google-chrome
