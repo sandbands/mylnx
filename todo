@@ -5,6 +5,9 @@ sudo pacman -Syyuu --needed base-devel
 sudo pacman -Syyuu base-devel
 sudo pacman -Syyuu ninja
 sudo pacman -Syyuu llvm cppcheck
+sudo pip install lizard
+pip install flawfinder
+
 
 
 echo "VBOX SETUP AT www.linuxtechi.com/install-virtualbox-on-arch-linux/"
@@ -88,5 +91,9 @@ sudo pacman -Syyuu vala
 
 echo "GET NASM -> https://www.nasm.us/"
 
+echo "GET C++ UTILS"
+# cppcheck -> https://cppcheck.sourceforge.io/
+# flawfinder -> https://dwheeler.com/flawfinder/
+# clangd -> https://clangd.llvm.org/
 
 
