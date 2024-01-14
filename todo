@@ -1,6 +1,6 @@
 echo "GENERAL INSTALLATIONS"
 sudo pacman -Syyuu
-sudo pacman -Syyuu vim neovim neovide go python gcc glibc gcc-libs clang nasm cmake binutils valgrind nano flatpak discord mingw-w64-gcc git base-devel zsh flameshot github-cli fish python-pip npm nodejs readline yakuake copyq 
+sudo pacman -Syyuu vim neovim neovide go python gcc glibc gcc-libs clang nasm cmake binutils llvm valgrind nano flatpak discord mingw-w64-gcc git base-devel zsh flameshot github-cli fish python-pip npm nodejs readline yakuake copyq 
 sudo pacman -Syyuu --needed base-devel
 sudo pacman -Syyuu base-devel
 sudo pacman -Syyuu ninja
