@@ -71,13 +71,15 @@ echo "INSTALL RUST"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 echo "MANUALLY INSTALL GDB"
-https://www.sourceware.org/gdb/
+echo from "https://www.sourceware.org/gdb/"
 
 echo "MORE GENERAL INSTALLATIONS"
 yay -Syyuu pamac-aur brave-bin google-chrome
 
 echo "INSTALL DOTNET"
+echo from "https://learn.microsoft.com/en-us/dotnet/core/install/linux" and "https://wiki.archlinux.org/title/.NET"
 sudo pacman -Syyuu dotnet-sdk dotnet-runtime dotnet-host dotnet-targeting-pack
+sudo dotnet workload update
 
 echo "INSTALL ASP"
 sudo pacman aspnet-runtime aspnet-targeting-pack
@@ -92,8 +94,8 @@ sudo pacman -Syyuu vala
 echo "GET NASM -> https://www.nasm.us/"
 
 echo "GET C++ UTILS"
-# cppcheck -> https://cppcheck.sourceforge.io/
-# flawfinder -> https://dwheeler.com/flawfinder/
-# clangd -> https://clangd.llvm.org/
+echo "cppcheck -> https://cppcheck.sourceforge.io/"
+echo "flawfinder -> https://dwheeler.com/flawfinder/"
+echo "clangd -> https://clangd.llvm.org/"
 
 
