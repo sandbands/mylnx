@@ -77,7 +77,7 @@ echo "MORE GENERAL INSTALLATIONS"
 yay -Syyuu pamac-aur brave-bin google-chrome
 
 echo "INSTALL DOTNET"
-echo from "https://learn.microsoft.com/en-us/dotnet/core/install/linux" and "https://wiki.archlinux.org/title/.NET"
+echo from "https://learn.microsoft.com/en-us/dotnet/core/install/linux" and "https://wiki.archlinux.org/title/.NET" and "https://dotnet.microsoft.com/en-us/download/dotnet/8.0"
 sudo pacman -Syyuu dotnet-sdk dotnet-runtime dotnet-host dotnet-targeting-pack
 sudo dotnet workload update
 
