@@ -8,9 +8,12 @@ sudo pacman -Syyuu llvm cppcheck
 sudo pip install lizard
 pip install flawfinder
 
+echo "GET CONDA -> ANACONDA INSTALLER"
+echo "GET IT @ \"https://docs.conda.io/projects/conda/en/latest/index.html\"
 
 
-echo "VBOX SETUP AT www.linuxtechi.com/install-virtualbox-on-arch-linux/"
+
+echo "VBOX SETUP AT \"www.linuxtechi.com/install-virtualbox-on-arch-linux/\""
 sudo pacman -Syyuu qemu
 sudo pacman -Syyuu virtualbox virtualbox-guest-iso
 sudo gpasswd -a $USER vboxusers
@@ -68,16 +71,17 @@ git clone https://github.com/sandbands/tempdir ~/temp
 git clone https://github.com/sandbands/otherstuff
 
 echo "INSTALL RUST"
+echo "SOURCE @ \"https://www.rust-lang.org/\""
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 echo "MANUALLY INSTALL GDB"
-echo from "https://www.sourceware.org/gdb/"
+echo "FROM \""https://www.sourceware.org/gdb/\""
 
 echo "MORE GENERAL INSTALLATIONS"
 yay -Syyuu pamac-aur brave-bin google-chrome
 
 echo "INSTALL DOTNET"
-echo from "https://learn.microsoft.com/en-us/dotnet/core/install/linux" and "https://wiki.archlinux.org/title/.NET" and "https://dotnet.microsoft.com/en-us/download/dotnet/8.0" and "https://dotnet.microsoft.com/en-us/download"
+echo "FROM \""https://learn.microsoft.com/en-us/dotnet/core/install/linux\"" AND \""https://wiki.archlinux.org/title/.NET\"" AND \""https://dotnet.microsoft.com/en-us/download/dotnet/8.0\" AND \"https://dotnet.microsoft.com/en-us/download\"" 
 sudo pacman -Syyuu dotnet-sdk dotnet-runtime dotnet-host dotnet-targeting-pack
 sudo dotnet workload update
 
@@ -91,11 +95,11 @@ sudo pacman -Syyuu jdk-openjdk
 echo "INSTALL VALA"
 sudo pacman -Syyuu vala
 
-echo "GET NASM -> https://www.nasm.us/"
+echo "GET NASM -> \"https://www.nasm.us/\""
 
 echo "GET C++ UTILS"
-echo "cppcheck -> https://cppcheck.sourceforge.io/"
-echo "flawfinder -> https://dwheeler.com/flawfinder/"
-echo "clangd -> https://clangd.llvm.org/"
+echo "cppcheck -> \"https://cppcheck.sourceforge.io/\""
+echo "flawfinder -> \"https://dwheeler.com/flawfinder/\""
+echo "clangd -> \"https://clangd.llvm.org/\""
 
 
