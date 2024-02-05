@@ -8,10 +8,6 @@ sudo pacman -Syyuu llvm cppcheck
 sudo pip install lizard
 pip install flawfinder
 
-echo "GET CONDA -> ANACONDA INSTALLER"
-echo "GET IT @ \"https://docs.conda.io/projects/conda/en/latest/index.html\"
-
-
 
 echo "VBOX SETUP AT \"www.linuxtechi.com/install-virtualbox-on-arch-linux/\""
 sudo pacman -Syyuu qemu
@@ -27,7 +23,7 @@ lsmod | grep -i vbox
 
 
 echo "CREATE FOLDERS FOR SCREENSHOTS, YOUR OWN BINARIES, TEMPORARY/SPAM FOLDER, AND NASM ASSEMBLY COMPILER BUILDS"
-mkdir captures bin temp nasm-builds 
+mkdir captures bin temp nasm-builds nasm-builds/bin
 
 echo "INSTALL YAY"
 git clone https://aur.archlinux.org/yay.git
