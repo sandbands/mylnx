@@ -151,15 +151,19 @@ export NPM_CONFIG_PREFIX="~/.npm-global"
 
 export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 export PATH="$HOME/vcpkg:$PATH"
-export PATH="$HOME.local/bin:$PATH"
-export PATH="$HOME/bin:$PATH"
-export PATH="$HOME/projects/myutils/bin:$PATH"
-export PATH="$HOME/projects/myutils/ccpp-make-init/bin:$PATH"
+export PATH="$HOME/.cargo/env:$PATH"
 export PATH="$HOME/.npm-global/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/nasm-builds/nasm-2.16.01:$PATH"
+export PATH="$HOME/nasm-builds/bin:$PATH"
 export PATH="$HOME/pclp:$PATH"
 
-. "$HOME/.cargo/env"
+export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/projects/myutils/bin:$PATH"
+export PATH="$HOME/projects/myutils/ccpp-make-init/bin:$PATH"
+
+
+# . "$HOME/.cargo/env"
+
 
 
