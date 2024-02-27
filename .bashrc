@@ -137,7 +137,10 @@ ex ()
 }
 
 
-export EDITOR=lvim
+
+
+
+export EDITOR=vim
 
 alias win64-go="env GOOS=windows GOARCH=amd64 go build package-import-path"
 alias win32-go="env GOOS=windows GOARCH=386 go build package-import-path"
@@ -145,7 +148,7 @@ alias win64-gcc="x86_64-w64-mingw32-gcc"
 alias win64-g++="x86_64-w64-mingw32-g++"
 alias win64-cargo="cargo build --target x86_64-pc-windows-gnu"
 alias py="python"
-alias gitpublish="git add .;git commit;git push"
+alias gitpublish="git add . && git commit && git push"
 
 export NPM_CONFIG_PREFIX="~/.npm-global"
 
@@ -155,15 +158,21 @@ export PATH="$HOME/.cargo/env:$PATH"
 export PATH="$HOME/.npm-global/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/nasm-builds/nasm-2.16.01:$PATH"
-export PATH="$HOME/nasm-builds/bin:$PATH"
 export PATH="$HOME/pclp:$PATH"
 
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/projects/myutils/bin:$PATH"
 export PATH="$HOME/projects/myutils/ccpp-make-init/bin:$PATH"
 
-
 # . "$HOME/.cargo/env"
+
+
+export XMAKE_ROOTDIR="/home/itsrxmmy/.local/bin"
+export XMAKE_PROGRAM_DIR="/home/itsrxmmy/.local/share/xmake"
+export PATH="$XMAKE_ROOTDIR:$PATH"
+test $FISH_VERSION && test -f "$XMAKE_PROGRAM_DIR/scripts/profile-unix.fish" && source "$XMAKE_PROGRAM_DIR/scripts/profile-unix.fish" && exit 0
+test -f "$XMAKE_PROGRAM_DIR/scripts/profile-unix.sh" && source "$XMAKE_PROGRAM_DIR/scripts/profile-unix.sh"
+
 
 
 
