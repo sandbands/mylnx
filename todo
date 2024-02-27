@@ -51,7 +51,8 @@ echo "INSTALL HOMEBREW"
 
 
 echo "INSTALL XMAKE @ \"https://xmake.io/\""
-/bin/bash -c "$(wget https://xmake.io/shget.text -O - | bash) || $(brew install xmake)"
+/bin/bash -c "$(wget https://xmake.io/shget.text -O - | bash)
+# OR: /bin/bash -c "$(brew install xmake)"
 
 
 echo "MORE GENERAL INSTALLATIONS"
