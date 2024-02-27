@@ -50,6 +50,10 @@ echo "INSTALL HOMEBREW"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 
+echo "INSTALL XMAKE @ \"https://xmake.io/\""
+/bin/bash -c "$(wget https://xmake.io/shget.text -O - | bash) || $(brew install xmake)"
+
+
 echo "MORE GENERAL INSTALLATIONS"
 sudo pacman -Syyuu curl zip unzip tar cmake ninja
 
@@ -97,5 +101,6 @@ echo "GET C++ UTILS"
 echo "cppcheck -> \"https://cppcheck.sourceforge.io/\""
 echo "flawfinder -> \"https://dwheeler.com/flawfinder/\""
 echo "clangd -> \"https://clangd.llvm.org/\""
+
 
 
