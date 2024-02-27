@@ -1,6 +1,6 @@
 echo "GENERAL INSTALLATIONS"
 sudo pacman -Syyuu
-sudo pacman -Syyuu vim neovim neovide go python gcc glibc gcc-libs r gcc-fortran gcc-go clang nasm cmake binutils llvm valgrind nano flatpak discord mingw-w64-gcc git base-devel zsh zig flameshot github-cli fish python-pip npm nodejs readline yakuake copyq 
+sudo pacman -Syyuu vim neovim neovide go python gcc glibc gcc-libs xmake gcc-fortran gcc-go clang nasm cmake binutils llvm xmake valgrind nano flatpak discord mingw-w64-gcc git base-devel zsh zig flameshot github-cli fish python-pip npm nodejs readline yakuake copyq 
 sudo pacman -Syyuu --needed base-devel
 sudo pacman -Syyuu base-devel
 sudo pacman -Syyuu ninja
@@ -51,7 +51,8 @@ echo "INSTALL HOMEBREW"
 
 
 echo "INSTALL XMAKE @ \"https://xmake.io/\""
-/bin/bash -c "$(wget https://xmake.io/shget.text -O - | bash)
+sudo pacman -Syyuu xmake
+# OR: /bin/bash -c "$(wget https://xmake.io/shget.text -O - | bash)
 # OR: /bin/bash -c "$(brew install xmake)"
 
 
