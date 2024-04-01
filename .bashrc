@@ -142,9 +142,9 @@ export FLATNVIM_DIR="$HOME/flatnvim"
 export FLATNVIM_BIN="$FLATNVIM_DIR/bin"
 export FLATNVIM_LOGFILE="$FLATNVIM_DIR/log.txt"
 export FLATNVIM_EXTRA_COMMAND="echo 'flatnvim has prevented a nested editor instance.' | sleep 1"
-export FLATNVIM_EDITOR="nvim"
+export FLATNVIM_EDITOR="vim"
 
-export EDITOR="nvim"
+export EDITOR="vim"
 
 alias win64-go="env GOOS=windows GOARCH=amd64 go build package-import-path"
 alias win32-go="env GOOS=windows GOARCH=386 go build package-import-path"
