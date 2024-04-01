@@ -5,7 +5,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$HOME/.local/bin:$PATH"
 
-MANJARO="/home/itsrxmmy/.zshrc_manjaro"
+MANJARO="$HOME/.zshrc_manjaro"
 RANDOM="random"
 
 # Set name of the theme to load --- if set to "random", it will
