@@ -5,7 +5,20 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$HOME/.local/bin:$PATH"
 
-MANJARO="$HOME/.zshrc_manjaro"
+MANJARO_CONFIG="/usr/share/zsh/manjaro-zsh-config"
+MANJARO_PROMPT="/usr/share/zsh/manjaro-zsh-prompt"
+MANJARO_ZSH="$HOME/.zshrc_manjaro"
+
+# if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+#   source /usr/share/zsh/manjaro-zsh-config
+# fi
+# # Use manjaro zsh prompt
+# if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+#   source /usr/share/zsh/manjaro-zsh-prompt
+# fi
+
+source $MANJARO_ZSH
+
 RANDOM="random"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -42,7 +55,8 @@ RANDOM="random"
 # ZSH_THEME="af-magic"
 # ZSH_THEME="candy-kingdom"
 
-source $MANJARO
+
+
 # ZSH_THEME=""
 
 ZSH_THEME_RANDOM_CANDIDATES=(
@@ -177,7 +191,7 @@ export FLATNVIM_LOGFILE="$FLATNVIM_DIR/log.txt"
 export FLATNVIM_EXTRA_COMMAND="echo 'flatnvim has prevented a nested editor instance.' | sleep 1"
 export FLATNVIM_EDITOR="nvim"
 
-export EDITOR="nvim"
+export EDITOR="vim"
 
 alias win64-go="env GOOS=windows GOARCH=amd64 go build package-import-path"
 alias win32-go="env GOOS=windows GOARCH=386 go build package-import-path"
