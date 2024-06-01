@@ -157,6 +157,8 @@ alias gitpublish="git add .;git commit;git push"
 export NPM_CONFIG_PREFIX="~/.npm-global"
 
 export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+# export PATH="/home/linuxbrew/.linuxbrew/Homebrew/bin:$PATH"
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 export PATH="$HOME/vcpkg:$PATH"
 export PATH="$HOME/.cargo/env:$PATH"
 export PATH="$HOME/.npm-global/bin:$PATH"
