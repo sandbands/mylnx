@@ -108,4 +108,13 @@ echo "clangd -> \"https://clangd.llvm.org/\""
 # MANUALLY INSTALL CLANG
 
 
+# ENABLE / FIX SNAP 
+sudo systemctl unmask snapd
+sudo systemctl enable snapd
+sudo systemctl start snapd
+sudo systemctl unmask snapd.service
+sudo systemctl enable snapd.service
+sudo systemctl start snapd.service
+sudo ln -s /var/lib/snapd/snap /snap
+
 
