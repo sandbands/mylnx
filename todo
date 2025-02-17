@@ -104,17 +104,19 @@ echo "cppcheck -> \"https://cppcheck.sourceforge.io/\""
 echo "flawfinder -> \"https://dwheeler.com/flawfinder/\""
 echo "clangd -> \"https://clangd.llvm.org/\""
 
-# MANUALLY INSTALL LLVM
-# MANUALLY INSTALL CLANG
+### MANUALLY INSTALL LLVM
+### MANUALLY INSTALL CLANG
 
 
-# ENABLE / FIX SNAP 
+### ENABLE / FIX SNAP... 
 sudo systemctl unmask snapd
 sudo systemctl enable snapd
 sudo systemctl start snapd
 sudo systemctl unmask snapd.service
 sudo systemctl enable snapd.service
 sudo systemctl start snapd.service
+systemctl enable --now snapd.apparmor
 sudo ln -s /var/lib/snapd/snap /snap
-
+### ...THEN REBOOT
+reboot now
 
