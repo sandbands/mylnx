@@ -104,5 +104,8 @@ echo "cppcheck -> \"https://cppcheck.sourceforge.io/\""
 echo "flawfinder -> \"https://dwheeler.com/flawfinder/\""
 echo "clangd -> \"https://clangd.llvm.org/\""
 
+# MANUALLY INSTALL LLVM
+# MANUALLY INSTALL CLANG
+
 
 
