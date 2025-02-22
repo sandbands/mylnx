@@ -120,6 +120,12 @@ sudo systemctl enable snapd.service
 sudo systemctl start snapd.service
 systemctl enable --now snapd.apparmor
 sudo ln -s /var/lib/snapd/snap /snap
+
+### ENABLE / FIX BLUETOOTH
+sudo pacman -S blueman
+sudo systemctl enable bluetooth
+sudo systemctl start bluetooth
+
 ### ...THEN REBOOT
 reboot
 
