@@ -189,4 +189,7 @@ test -f "/home/itsrxmmy/.xmake/profile" && source "/home/itsrxmmy/.xmake/profile
 #
 
 
+alias clear_zsh_history="rm -f ~/.zsh_history && touch ~/.zsh_history"
+alias clear_bash_history="rm -f ~/.bash_history && touch ~/.bash_history"
+
 
