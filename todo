@@ -90,9 +90,9 @@ sudo dotnet workload update
 echo "INSTALL ASP"
 sudo pacman -Syyuu aspnet-runtime aspnet-targeting-pack
 
-echo "INSTALL JAVA"
+echo "INSTALL JAVA, KOTLIN, AND UTILITIES"
 sudo pacman -sS java | grep jdk
-sudo pacman -Syyuu jdk-openjdk
+sudo pacman -Syyuu jdk-openjdk maven gradle kotlin
 
 echo "INSTALL VALA"
 sudo pacman -Syyuu vala
