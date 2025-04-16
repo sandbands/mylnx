@@ -140,7 +140,7 @@ sudo pacman -Syyuu ttf-cascadia-code ttf-cascadia-code-nerd ttf-cascadia-mono-ne
 
 ### INSTALL WM'S
 ### See also: (https://wiki.archlinux.org/title/Window_manager#List_of_window_managers)
-sudo pacman -Syyuu i3 sway swaylock swayidle swaybg qtile enlightenment ecrire ephoto evisum rage terminology kwin
+sudo pacman -Syyuu sxhkd i3 sway swaylock swayidle swaybg qtile enlightenment ecrire ephoto evisum rage terminology kwin
 yay -Syyuu wayfire dwm dk
 # install sxhkd for keybinds or something like that
 sudo pacman -Syyuu sxhkd
