@@ -139,9 +139,10 @@ sudo systemctl start bluetooth
 sudo pacman -Syyuu ttf-cascadia-code ttf-cascadia-code-nerd ttf-cascadia-mono-nerd ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols-mono ttf-noto-nerd ttf-sourcecodepro-nerd ttf-ubuntu-font-family ttf-ubuntu-mono-nerd ttf-ubuntu-nerd ttf-fira-code ttf-firacode-nerd ttf-fira-mono ttf-hack ttf-hack-nerd ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-dejavu ttf-liberation ttf-liberation-mono-nerd ttf-dejavu-nerd 
 
 ### INSTALL WM'S
-### See also: (https://wiki.archlinux.org/title/Window_manager#List_of_window_managers)
+### See also: (https://wiki.archlinux.org/title/Window_manager#List_of_window_managers), (https://wiki.archlinux.org/title/Wayland), (https://wiki.archlinux.org/title/Xorg)
 sudo pacman -Syyuu sxhkd i3 sway swaylock swayidle swaybg qtile enlightenment ecrire ephoto evisum rage terminology kwin
 yay -Syyuu wayfire dwm dk
+sudo pacman -Syyuu xorg-xwayland xorg-server
 # install sxhkd for keybinds or something like that
 sudo pacman -Syyuu sxhkd
 # configure dk with sxhkd
