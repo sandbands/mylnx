@@ -1,13 +1,19 @@
 echo "GENERAL INSTALLATIONS"
 sudo pacman -Syyuu
-sudo pacman -Syyuu wget curl nano vim neovim neovide emacs micro helix go llvm clang lldb lld libc++ polly ccls python gcc glibc gcc-libs libtool automake autoconf make m4 gdb bison binutils lua luarocks lua-language-server xmake cmake ninja nasm valgrind splint distcc cppcheck flatpak mingw-w64-gcc git base-devel zsh zig flameshot github-cli fish starship python-pip npm nodejs readline yakuake htop chezmoi copyq tmux filelight firefox firefox-developer-edition 
+sudo pacman -Syyuu wget curl nano vim neovim neovide emacs micro helix nasm go llvm clang lldb lld libc++ polly ccls python gcc glibc gcc-libs libtool automake autoconf make m4 gdb bison binutils fpc fpc-src perl elixir julia erlang ruby lua luarocks lua-language-server xmake cmake ninja valgrind splint distcc cppcheck flatpak mingw-w64-gcc git base-devel zsh zig flameshot github-cli fish starship python-pip npm nodejs readline yakuake htop chezmoi copyq tmux filelight firefox firefox-developer-edition 
 sudo pacman -Syyuu --needed base-devel
 sudo pacman -Syyuu base-devel base
 
-# remove /usr/lib/python3.xx/EXTERNALLY-MANAGED (use sudo)
+# echo "FIX PIP"
+# sudo rm -f /usr/lib/python3.xx/EXTERNALLY-MANAGED (use sudo)
+
+echo "GENERAL INSTALLATIONS (cont.)"
 sudo pip install lizard
 pip install flawfinder
 
+# echo "INSTALL CLOJURE & SCALA"
+# INSTALL CLOJURE -> https://clojure.org/index/ 
+# INSTALL SCALA -> https://scala-lang.org/ 
 
 echo "VBOX SETUP AT \"www.linuxtechi.com/install-virtualbox-on-arch-linux/\""
 sudo pacman -Syyuu qemu
