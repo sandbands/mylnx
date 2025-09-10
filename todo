@@ -49,7 +49,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 
 echo "MORE GENERAL INSTALLATIONS"
-yay -S ikos rr icu69-bin mingw-w64-tools snapd appimagelauncher visual-studio-code-bin google-chrome timeshift gparted
+yay -S rakudo ikos rr icu69-bin mingw-w64-tools snapd appimagelauncher visual-studio-code-bin google-chrome timeshift gparted
 
 
 echo "INSTALL HOMEBREW"
