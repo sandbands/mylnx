@@ -4,8 +4,8 @@ sudo pacman -Syyuu wget curl nano vim neovim neovide emacs micro helix nasm go l
 sudo pacman -Syyuu --needed base-devel
 sudo pacman -Syyuu base-devel base
 
-# echo "FIX PIP"
-# sudo rm -f /usr/lib/python3.xx/EXTERNALLY-MANAGED (use sudo)
+# echo "FIX PIP (use sudo)"
+# sudo rm -f /usr/lib/python3.xx/EXTERNALLY-MANAGED 
 
 echo "GENERAL INSTALLATIONS (cont.)"
 sudo pip install lizard
