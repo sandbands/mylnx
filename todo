@@ -82,9 +82,8 @@ echo "INSTALL RUST"
 echo "SOURCE @ \"https://www.rust-lang.org/\""
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-echo "INSTALL ZED EDITOR"
-echo "SOURCE @ https://zed.dev/"
-curl -f https://zed.dev/install.sh | sh
+echo "INSTALL LAPCE EDITOR"
+echo "SOURCE @ https://lap.dev/lapce/"
 
 echo "MANUALLY INSTALL GDB"
 echo "FROM \""https://www.sourceware.org/gdb/\""
