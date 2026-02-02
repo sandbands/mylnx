@@ -1,0 +1,162 @@
+echo "GENERAL INSTALLATIONS"
+sudo pacman -Syyuu
+sudo pacman -Syyuu wget curl nano vim neovim neovide emacs micro helix nasm go llvm clang lldb lld libc++ polly ccls python gcc glibc gcc-libs libtool automake autoconf make m4 gdb bison binutils fpc fpc-src perl elixir julia erlang ruby lua luarocks lua-language-server xmake cmake ninja valgrind splint distcc cppcheck flatpak mingw-w64-gcc git base-devel zsh zig flameshot github-cli fish starship python-pip npm nodejs readline yakuake htop chezmoi copyq tmux filelight firefox firefox-developer-edition 
+sudo pacman -Syyuu --needed base-devel
+sudo pacman -Syyuu base-devel base
+
+# echo "FIX PIP (use sudo)"
+# sudo rm -f /usr/lib/python3.xx/EXTERNALLY-MANAGED 
+
+echo "GENERAL INSTALLATIONS (cont.)"
+sudo pip install lizard
+pip install flawfinder
+
+# echo "INSTALL CLOJURE & SCALA"
+# INSTALL CLOJURE -> https://clojure.org/index/ 
+# INSTALL SCALA -> https://scala-lang.org/ 
+
+echo "VBOX SETUP AT \"www.linuxtechi.com/install-virtualbox-on-arch-linux/\""
+sudo pacman -Syyuu qemu
+sudo pacman -Syyuu virtualbox virtualbox-guest-iso
+sudo gpasswd -a $USER vboxusers
+sudo modprobe vboxdrv
+yay -Syyuu virtualbox-ext-oracle
+sudo systemctl enable vboxweb.service
+sudo systemctl start vboxweb.service
+brew tap hashicorp/tap
+brew install hashicorp/tap/vagrant
+lsmod | grep -i vbox
+
+
+echo "CREATE FOLDERS FOR SCREENSHOTS, YOUR OWN BINARIES, TEMPORARY/SPAM FOLDER, AND NASM ASSEMBLY COMPILER BUILDS"
+mkdir captures bin temp nasm-builds nasm-builds/bin
+
+echo "INSTALL YAY"
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+echo "GO BACK TO HOME"
+cd
+
+echo "INSTALL BASIC GOLANG TOOLS"
+go install golang.org/x/tools/cmd/goimports@latest
+go install golang.org/x/tools/gopls@latest
+
+
+echo "INSTALL OHMYZSH"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+
+echo "MORE GENERAL INSTALLATIONS"
+yay -S rakudo ikos rr icu69-bin mingw-w64-tools snapd appimagelauncher visual-studio-code-bin google-chrome timeshift gparted
+
+
+echo "INSTALL HOMEBREW"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+
+echo "INSTALL XMAKE @ \"https://xmake.io/\""
+sudo pacman -Syyuu xmake
+# OR: /bin/bash -c "$(wget https://xmake.io/shget.text -O - | bash)
+# OR: /bin/bash -c "$(brew install xmake)"
+
+
+echo "MORE GENERAL INSTALLATIONS"
+sudo pacman -Syyuu curl zip unzip tar cmake ninja
+
+
+echo "INSTALL VCPKG"
+git clone https://github.com/Microsoft/vcpkg.git
+./vcpkg/bootstrap-vcpkg.sh
+
+
+echo "GITHUB SETUP & FILE RETRIEVEMENT"
+gh auth login
+git clone https://github.com/sandbands/projects
+git clone https://github.com/sandbands/work
+git clone https://github.com/sandbands/tempdir ~/temp
+git clone https://github.com/sandbands/otherstuff
+
+echo "INSTALL RUST"
+echo "SOURCE @ \"https://www.rust-lang.org/\""
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+echo "MANUALLY INSTALL GDB"
+echo "FROM \""https://www.sourceware.org/gdb/\""
+
+echo "MORE GENERAL INSTALLATIONS"
+yay -Syyuu pamac-aur brave-bin google-chrome
+
+echo "INSTALL DOTNET"
+echo "FROM \""https://learn.microsoft.com/en-us/dotnet/core/install/linux\"" AND \""https://wiki.archlinux.org/title/.NET\"" AND \""https://dotnet.microsoft.com/en-us/download/dotnet/8.0\" AND \"https://dotnet.microsoft.com/en-us/download\"" 
+sudo pacman -Syyuu dotnet-sdk dotnet-runtime dotnet-host dotnet-targeting-pack
+sudo dotnet workload update
+
+echo "INSTALL ASP"
+sudo pacman -Syyuu aspnet-runtime aspnet-targeting-pack
+
+echo "INSTALL JAVA, KOTLIN, AND UTILITIES"
+sudo pacman -sS java | grep jdk
+sudo pacman -Syyuu jdk-openjdk maven gradle kotlin
+
+echo "INSTALL VALA"
+sudo pacman -Syyuu vala
+
+echo "GET NASM -> \"https://www.nasm.us/\""
+
+echo "GET C++ UTILS"
+echo "cppcheck -> \"https://cppcheck.sourceforge.io/\""
+echo "flawfinder -> \"https://dwheeler.com/flawfinder/\""
+echo "clangd -> \"https://clangd.llvm.org/\""
+
+### https://llvm.org/#
+### MANUALLY INSTALL LLVM
+### MANUALLY INSTALL LLDB
+### MANUALLY INSTALL CLANG
+### MANUALLY INSTALL CLANGD
+
+### IF VSCODE SETTINGS SYNC DOES NOT WORK, REFER TO THIS ARTICLE
+### https://stackoverflow.com/a/79477731/16722432
+### FOLLOW INSTRUCTIONS AND USE CHEZMOI TO FORCEFULLY/MANUALLY RESYNC SETTINGS AND EXTENSIONS
+### KEEP WINDOWS MACHINE UP TO DATE, BECAUSE WINDOWS MACHINE HAS FUNCTIONING SETTINGS SYNC
+### CHEZMOI DOES NOT AUTOMATICALLY RESYNC, SO YOU HAVE TO RESYNC ALL CHANGES MANUALLY
+### (OPTIONAL) ALSO SEE: https://dotfiles.github.io/utilities/
+
+
+### ENABLE / FIX SNAP... 
+sudo systemctl unmask snapd
+sudo systemctl enable snapd
+sudo systemctl start snapd
+sudo systemctl unmask snapd.service
+sudo systemctl enable snapd.service
+sudo systemctl start snapd.service
+systemctl enable --now snapd.apparmor
+sudo ln -s /var/lib/snapd/snap /snap
+
+### ENABLE / FIX BLUETOOTH
+sudo pacman -S blueman
+sudo systemctl enable bluetooth
+sudo systemctl start bluetooth
+
+### INSTALL LIBREOFFICE (https://wiki.archlinux.org/title/LibreOffice)
+sudo pacman -Syyuu libreoffice-still libreoffice-extension-writer2latex libreoffice-extension-texmaths
+
+### INSTALL SOME FONTS
+sudo pacman -Syyuu ttf-cascadia-code ttf-cascadia-code-nerd ttf-cascadia-mono-nerd ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols-mono ttf-noto-nerd ttf-sourcecodepro-nerd ttf-ubuntu-font-family ttf-ubuntu-mono-nerd ttf-ubuntu-nerd ttf-fira-code ttf-firacode-nerd ttf-fira-mono ttf-hack ttf-hack-nerd ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-dejavu ttf-liberation ttf-liberation-mono-nerd ttf-dejavu-nerd 
+sudo pacman -Syyuu ttf-caladea ttf-carlito ttf-dejavu ttf-liberation noto-fonts noto-fonts-extra adobe-source-code-pro-fonts adobe-source-sans-fonts adobe-source-serif-fonts
+
+### INSTALL WM'S
+### See also: (https://wiki.archlinux.org/title/Window_manager#List_of_window_managers), (https://wiki.archlinux.org/title/Wayland), (https://wiki.archlinux.org/title/Xorg)
+sudo pacman -Syyuu sxhkd i3 sway swaylock swayidle swaybg qtile enlightenment ecrire ephoto evisum rage terminology kwin
+yay -Syyuu wayfire dwm dk
+sudo pacman -Syyuu xorg-xwayland xorg-server
+# install sxhkd for keybinds or something like that
+sudo pacman -Syyuu sxhkd
+# configure dk with sxhkd
+mkdir -p ~/.config/dk && cp /usr/share/doc/dk/{dk,sxhkd}rc $HOME/.config/dk/
+
+
+### ...THEN REBOOT
+reboot
+
